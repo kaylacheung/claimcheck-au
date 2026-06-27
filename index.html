@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ClaimCheck AU</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>ClaimCheck AU</h1>
+    <p>A free guide to help Australians understand where to start with health claims.</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Can I claim this?</h2>
+      <p>Answer a few questions and we will show you what to check next.</p>
+
+      <form id="claimForm">
+        <label for="insuranceStatus">Do you have private health insurance?</label>
+        <select id="insuranceStatus" required>
+          <option value="">Select one</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+          <option value="unsure">Not sure</option>
+        </select>
+
+        <label for="insurer">Which insurer are you with?</label>
+        <select id="insurer">
+          <option value="">Select one</option>
+          <option value="medibank">Medibank</option>
+          <option value="bupa">Bupa</option>
+          <option value="hcf">HCF</option>
+          <option value="nib">nib</option>
+          <option value="ahm">ahm</option>
+          <option value="australian-unity">Australian Unity</option>
+          <option value="other">Other / not listed</option>
+        </select>
+
+        <label for="service">What service did you use?</label>
+        <select id="service" required>
+          <option value="">Select one</option>
+          <option value="dental">Dental</option>
+          <option value="optical">Optical</option>
+          <option value="physio">Physiotherapy</option>
+          <option value="psychology">Psychology</option>
+          <option value="gp">GP consultation</option>
+          <option value="specialist">Specialist consultation</option>
+          <option value="ambulance">Ambulance</option>
+        </select>
+
+        <label for="coverType">What type of cover do you have?</label>
+        <select id="coverType">
+          <option value="">Select one</option>
+          <option value="extras">Extras only</option>
+          <option value="hospital">Hospital only</option>
+          <option value="combined">Hospital and extras</option>
+          <option value="unknown">Not sure</option>
+        </select>
+
+        <button type="submit">Check my next step</button>
+      </form>
+    </section>
+
+    <section id="result" class="card hidden"></section>
+
+    <section class="card">
+      <h2>For people without private insurance</h2>
+      <p>
+        You can use Healthdirect to find nearby health services, including GPs.
+        You can also narrow results by needs such as bulk billing or location.
+      </p>
+      <a class="button-link" href="https://www.healthdirect.gov.au/australian-health-services" target="_blank">
+        Find a health service
+      </a>
+    </section>
+
+    <section class="card warning">
+      <h2>Important disclaimer</h2>
+      <p>
+        ClaimCheck AU does not provide medical, financial, legal or insurance advice.
+        This website only gives general guidance. Always confirm your cover directly with your insurer, Medicare or the relevant provider.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>ClaimCheck AU - prototype version</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
