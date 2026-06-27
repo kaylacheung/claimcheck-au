@@ -4,13 +4,17 @@
 
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Calibri, Arial, Helvetica, sans-serif;
   background:
     radial-gradient(circle at top left, #dff6ff 0, transparent 34%),
     radial-gradient(circle at bottom right, #ffe4ec 0, transparent 30%),
     linear-gradient(180deg, #f7fbff 0%, #fff9fb 100%);
   color: #17324d;
   min-height: 100vh;
+}
+
+body.rtl {
+  direction: rtl;
 }
 
 .app {
@@ -32,8 +36,12 @@ body {
   gap: 10px;
   margin-bottom: 18px;
   color: #557188;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
+}
+
+body.rtl .language-row {
+  justify-content: flex-start;
 }
 
 #languageSelect {
@@ -42,8 +50,9 @@ body {
   background: #ffffff;
   color: #17324d;
   padding: 9px 12px;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
+  font-family: Calibri, Arial, Helvetica, sans-serif;
 }
 
 .tag {
@@ -53,7 +62,7 @@ body {
   border-radius: 999px;
   background: #e2f5ff;
   color: #2677a8;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
 }
 
@@ -75,7 +84,7 @@ h1 {
   max-width: 580px;
   margin: 8px auto 0;
   color: #5c7288;
-  font-size: 17px;
+  font-size: 18px;
   line-height: 1.5;
 }
 
@@ -99,7 +108,7 @@ h1 {
   gap: 12px;
   margin-bottom: 12px;
   color: #557188;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .progress-bar {
@@ -111,7 +120,7 @@ h1 {
 }
 
 #progressFill {
-  width: 20%;
+  width: 16%;
   height: 100%;
   border-radius: 999px;
   background: linear-gradient(90deg, #8ed7f8, #a7e8d0);
@@ -141,7 +150,7 @@ h2 {
 #questionHelp {
   margin: 14px 0 22px;
   color: #5c7288;
-  font-size: 17px;
+  font-size: 18px;
   line-height: 1.5;
 }
 
@@ -171,7 +180,7 @@ h2 {
 
 .medicare-card-title {
   margin: 0;
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 900;
   color: #195f31;
 }
@@ -200,7 +209,7 @@ h2 {
   max-width: 430px;
   margin: 10px auto 0;
   color: #5c7288;
-  font-size: 14px;
+  font-size: 15px;
   text-align: center;
 }
 
@@ -216,11 +225,16 @@ h2 {
   color: #17324d;
   padding: 16px;
   border-radius: 18px;
-  font-size: 18px;
+  font-size: 19px;
   font-weight: 800;
   text-align: left;
   cursor: pointer;
+  font-family: Calibri, Arial, Helvetica, sans-serif;
   transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+
+body.rtl .answer-button {
+  text-align: right;
 }
 
 .answer-button:hover {
@@ -235,17 +249,25 @@ h2 {
   gap: 12px;
 }
 
+body.rtl .answer-main {
+  flex-direction: row-reverse;
+}
+
 .answer-detail {
   display: block;
   margin: 7px 0 0 42px;
   color: #667c8f;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 400;
   line-height: 1.45;
 }
 
+body.rtl .answer-detail {
+  margin: 7px 42px 0 0;
+}
+
 .icon-circle,
-.logo-badge {
+.logo-fallback {
   flex: 0 0 auto;
   display: inline-flex;
   align-items: center;
@@ -261,9 +283,31 @@ h2 {
   line-height: 1;
 }
 
-.logo-badge {
-  width: 42px;
+.logo-wrap {
+  flex: 0 0 auto;
+  width: 64px;
+  height: 40px;
+  border: 1px solid #111111;
   border-radius: 12px;
+  background: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.insurer-logo {
+  max-width: 54px;
+  max-height: 28px;
+  object-fit: contain;
+  display: block;
+}
+
+.logo-fallback {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 0;
   font-size: 12px;
   letter-spacing: 0.02em;
 }
@@ -274,6 +318,7 @@ h2 {
   border: none;
   cursor: pointer;
   font-weight: 800;
+  font-family: Calibri, Arial, Helvetica, sans-serif;
 }
 
 .icon-button {
@@ -313,15 +358,20 @@ h2 {
 
 .result-card p {
   color: #526b82;
-  font-size: 17px;
+  font-size: 18px;
   line-height: 1.5;
 }
 
 .result-list {
   padding-left: 20px;
   color: #526b82;
-  font-size: 17px;
+  font-size: 18px;
   line-height: 1.5;
+}
+
+body.rtl .result-list {
+  padding-left: 0;
+  padding-right: 20px;
 }
 
 .result-list li {
@@ -357,6 +407,7 @@ h2 {
   background: #fff7dc;
   color: #725d13;
   line-height: 1.5;
+  font-size: 17px;
 }
 
 .notice strong {
@@ -372,7 +423,7 @@ h2 {
   margin: 18px auto 0;
   text-align: center;
   color: #73879a;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.5;
 }
 
@@ -382,6 +433,10 @@ h2 {
   }
 
   .language-row {
+    justify-content: center;
+  }
+
+  body.rtl .language-row {
     justify-content: center;
   }
 
@@ -398,11 +453,13 @@ h2 {
   }
 
   .answer-button {
-    font-size: 16px;
+    font-size: 17px;
   }
 
-  .answer-detail {
+  .answer-detail,
+  body.rtl .answer-detail {
     margin-left: 0;
+    margin-right: 0;
   }
 
   .medicare-card-line {
