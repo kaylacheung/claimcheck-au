@@ -491,26 +491,64 @@ Object.assign(translations.zhHans.results, {
   whatNext: "下一步",
   beforeClaim: "理赔前请检查",
   nextStep: "你的下一步",
-  reminder: "提醒：这只是一般指引，不能保证理赔会被接受。",
+  reminder: "提醒：这只是一般指引，不能保证你的报销或理赔一定会被接受。",
   applyTitle: "你可能可以申请 Medicare",
   applyBody: "根据你的回答，建议先检查 Medicare。你可能已经在家庭 Medicare 卡上，或者可以自己申请。",
-  visitorCoveredTitle: "你可能有访客 Medicare 支持",
+  citizenBody: "长期住在澳洲的澳洲公民通常可以申请 Medicare，但需要提供身份证明和居住相关文件。",
+  nzBody: "新西兰公民如果可以证明会在澳洲住满 6 个月或以上、过去 12 个月内已经住满 6 个月，或已经申请澳洲永久居留，通常值得检查 Medicare 申请资格。",
+  permanentBody: "澳洲永久居民通常可以申请 Medicare，但需要提供身份证明和永久居留文件。",
+  appliedPrBody: "部分已经申请澳洲永久居留或永久保护签证的人，在申请审理期间可能可以申请 Medicare，特别是有工作权利或在澳洲有符合条件的近亲时。",
+  maybeAppliedPrBody: "你可能仍然有申请路径，但需要看你的签证条件、工作权利和家庭情况。请在依赖 Medicare 前查看官方规则。",
+  temporaryBody: "临时签证持有人不会自动获得 Medicare。部分临时签证可能因特殊政府规定而有资格，但必须查看你的具体签证规则。",
+  generalBody: "先检查你是否已经在家庭 Medicare 卡上，然后再看你的公民身份、居留身份或签证是否允许你申请。",
+  applySteps: ["检查你是否已经列在家庭 Medicare 卡上。", "登录 myGov，查看你的账号是否已经关联 Medicare。", "如果尚未登记，请根据个人情况准备护照、ImmiCard、签证、公民身份、居住地址或其他证明文件。", "使用官方 Medicare 登记页面在线申请，或填写 Medicare 登记表。"],
+  visitorCoveredTitle: "你可能可以获得访客 Medicare 支持",
   visitorNotListedTitle: "你可能需要旅游保险或海外健康保险",
-  visitorCoveredBody: "澳洲与该国家有互惠医疗协议。如果符合协议条件，这次问诊可能可以通过 Medicare 获得部分支持。",
-  visitorNotListedBody: "你选择的国家不在此工具的互惠协议列表中。请检查旅游保险、海外学生健康保险，或查看 Services Australia 官方页面。",
+  visitorCoveredBody: "澳洲与该国家有互惠医疗协议。如果符合协议条件，这次问诊或服务可能可以通过 Medicare 获得部分支持。",
+  visitorItalyNote: "如果你来自意大利，Services Australia 说明 Medicare 支持通常只适用于在澳期间的 6 个月内。",
+  visitorNotListedBody: "你选择的国家不在此工具的互惠医疗协议列表中。请检查旅游保险、海外学生健康保险，或查看 Services Australia 官方页面。",
   visitorWhy: "这个问题是关于国家之间的政府医疗协议，不是关于种族、族裔、语言或外貌。",
+  visitorSteps: ["预约前，询问诊所是否接受 Medicare 或互惠医疗协议患者。", "带上护照、签证信息以及任何健康保险文件。", "如果是紧急情况，请直接联系医疗机构，并询问是否需要先付款以及大概费用。", "使用 Services Australia 的官方互惠医疗协议页面，确认你的国家适用的具体规则。"],
   insuranceUnsureTitle: "检查你是否已有私人健康保险",
   insuranceUnsureBody: "你可能已经在自己的保险或家庭保险中。",
+  insuranceUnsureSteps: ["在邮箱中搜索 health insurance、Medibank、Bupa、HCF、nib、ahm 或 premium 等关键词。", "查看银行账单是否有定期健康保险扣款。", "询问父母、伴侣或家人，你是否在家庭保险中。", "查看你是否有私人健康保险卡或保险 app。"],
   noPrivateTitle: "Medicare 或低费用路径",
   privateTitle: "理赔指引",
   doctorNotice: "重要：这看起来是医生问诊。普通 GP 和非住院专科问诊通常通过 Medicare，而不是私人医保。私人医保通常只在住院治疗时与医生费用更相关。",
   extrasLikely: "可能的下一步：你选择的计划看起来可能包含 extras。如果该服务包含在保单内、等待期已结束且年度限额未用完，可能可以理赔。",
   hospitalIssue: "你选择的是住院类保险。这个服务通常属于 extras，因此除非保单也包含 extras，否则可能无法理赔。",
+  ambulanceNotice: "救护车保障取决于你所在的州以及具体保单。请同时查看保险公司规则和州救护车规则。",
+  policyNotice: "这取决于你的具体保单。预约前请查看保险 app、保单文件或官方理赔页面。",
   planUnsureNotice: "因为你不确定具体计划，请只把这个结果当作指引。预约前请查看保险 app 或致电保险公司。",
-  officialClaimText: "使用保险公司的官方理赔页面确认保障并开始理赔。"
+  claimChecklist: ["这项服务是否包含在你的具体保单中？", "等待期是否已经结束？", "你是否有详细收据或发票？", "服务提供者是否被保险公司认可？", "你是否已经用完年度限额？"],
+  noPrivateSteps: ["使用 Healthdirect 查找附近的医疗服务。", "尽量寻找 bulk-billing 或低费用服务提供者。", "预约前致电诊所，询问自付费用。", "如果是 GP 问诊，请直接询问是否 bulk bill。"],
+  officialClaimText: "使用保险公司的官方理赔页面确认保障并开始理赔。",
+  otherInsurerNotice: "你的保险公司暂未列出。请在保险公司官网搜索 make a claim、extras claim 或 member login。"
 });
 
-Object.assign(translations.zhHant.results, translations.zhHans.results, {
+Object.assign(translations.zhHans.serviceCategory, {
+  gp: "通常通过 Medicare",
+  specialist: "通常通过 Medicare，除非属于住院治疗",
+  psychology: "可能涉及 Medicare 或 extras",
+  dental: "通常属于 extras 保险",
+  optical: "通常属于 extras 保险",
+  physio: "通常属于 extras 保险",
+  ambulance: "取决于州规则和保单",
+  other: "Medicare 或低费用路径"
+});
+
+Object.assign(translations.zhHans.serviceExplanation, {
+  gp: "普通 GP 问诊通常通过 Medicare 处理，而不是私人健康保险。是否可以 bulk bill 取决于具体诊所。",
+  specialist: "非住院专科医生问诊通常涉及 Medicare 返还。私人健康保险通常在住院治疗时更相关。",
+  psychology: "如果你有有效的心理健康治疗计划，心理咨询可能涉及 Medicare。部分 extras 保单也可能包含心理服务。",
+  dental: "牙科通常与 extras 保险相关。请查看年度限额、等待期、服务提供者规则和详细收据。",
+  optical: "眼科或配镜通常与 extras 保险相关。请检查眼镜、隐形眼镜或眼部检查是否包含在保单中。",
+  physio: "物理治疗通常与 extras 保险相关。请检查每次限额、年度限额、等待期以及服务提供者是否被认可。",
+  ambulance: "救护车保障取决于你所在的州和私人健康保险保单。请同时查看州规则和保险公司规则。",
+  other: "你的下一步是查看 Medicare、公共医疗或低费用服务选择。"
+});
+
+Object.assign(translations.zhHant.results, {
   likelyPathway: "可能路徑",
   selectedInsurer: "已選保險公司",
   selectedPlan: "已選計劃",
@@ -518,9 +556,61 @@ Object.assign(translations.zhHant.results, translations.zhHans.results, {
   whatNext: "下一步",
   beforeClaim: "理賠前請檢查",
   nextStep: "你的下一步",
-  reminder: "提醒：這只是一般指引，不能保證理賠會被接受。",
+  reminder: "提醒：這只是一般指引，不能保證你的報銷或理賠一定會被接受。",
   applyTitle: "你可能可以申請 Medicare",
-  privateTitle: "理賠指引"
+  applyBody: "根據你的回答，建議先檢查 Medicare。你可能已經在家庭 Medicare 卡上，或者可以自己申請。",
+  citizenBody: "長期住在澳洲的澳洲公民通常可以申請 Medicare，但需要提供身份證明和居住相關文件。",
+  nzBody: "紐西蘭公民如果可以證明會在澳洲住滿 6 個月或以上、過去 12 個月內已經住滿 6 個月，或已經申請澳洲永久居留，通常值得檢查 Medicare 申請資格。",
+  permanentBody: "澳洲永久居民通常可以申請 Medicare，但需要提供身份證明和永久居留文件。",
+  appliedPrBody: "部分已經申請澳洲永久居留或永久保護簽證的人，在申請審理期間可能可以申請 Medicare，特別是有工作權利或在澳洲有符合條件的近親時。",
+  maybeAppliedPrBody: "你可能仍然有申請路徑，但需要看你的簽證條件、工作權利和家庭情況。請在依賴 Medicare 前查看官方規則。",
+  temporaryBody: "臨時簽證持有人不會自動獲得 Medicare。部分臨時簽證可能因特殊政府規定而有資格，但必須查看你的具體簽證規則。",
+  generalBody: "先檢查你是否已經在家庭 Medicare 卡上，然後再看你的公民身份、居留身份或簽證是否允許你申請。",
+  applySteps: ["檢查你是否已經列在家庭 Medicare 卡上。", "登入 myGov，查看你的帳號是否已經關聯 Medicare。", "如果尚未登記，請根據個人情況準備護照、ImmiCard、簽證、公民身份、居住地址或其他證明文件。", "使用官方 Medicare 登記頁面線上申請，或填寫 Medicare 登記表。"],
+  visitorCoveredTitle: "你可能可以獲得訪客 Medicare 支援",
+  visitorNotListedTitle: "你可能需要旅遊保險或海外健康保險",
+  visitorCoveredBody: "澳洲與該國家有互惠醫療協議。如果符合協議條件，這次問診或服務可能可以透過 Medicare 獲得部分支援。",
+  visitorItalyNote: "如果你來自義大利，Services Australia 說明 Medicare 支援通常只適用於在澳期間的 6 個月內。",
+  visitorNotListedBody: "你選擇的國家不在此工具的互惠醫療協議列表中。請檢查旅遊保險、海外學生健康保險，或查看 Services Australia 官方頁面。",
+  visitorWhy: "這個問題是關於國家之間的政府醫療協議，不是關於種族、族裔、語言或外貌。",
+  visitorSteps: ["預約前，詢問診所是否接受 Medicare 或互惠醫療協議患者。", "帶上護照、簽證資訊以及任何健康保險文件。", "如果是緊急情況，請直接聯絡醫療機構，並詢問是否需要先付款以及大概費用。", "使用 Services Australia 的官方互惠醫療協議頁面，確認你的國家適用的具體規則。"],
+  insuranceUnsureTitle: "檢查你是否已有私人健康保險",
+  insuranceUnsureBody: "你可能已經在自己的保險或家庭保險中。",
+  insuranceUnsureSteps: ["在電郵中搜尋 health insurance、Medibank、Bupa、HCF、nib、ahm 或 premium 等關鍵字。", "查看銀行帳單是否有定期健康保險扣款。", "詢問父母、伴侶或家人，你是否在家庭保險中。", "查看你是否有私人健康保險卡或保險 app。"],
+  noPrivateTitle: "Medicare 或低費用路徑",
+  privateTitle: "理賠指引",
+  doctorNotice: "重要：這看起來是醫生問診。普通 GP 和非住院專科問診通常透過 Medicare，而不是私人醫療保險。私人醫療保險通常只在住院治療時與醫生費用更相關。",
+  extrasLikely: "可能的下一步：你選擇的計劃看起來可能包含 extras。如果該服務包含在保單內、等待期已結束且年度限額未用完，可能可以理賠。",
+  hospitalIssue: "你選擇的是住院類保險。這個服務通常屬於 extras，因此除非保單也包含 extras，否則可能無法理賠。",
+  ambulanceNotice: "救護車保障取決於你所在的州以及具體保單。請同時查看保險公司規則和州救護車規則。",
+  policyNotice: "這取決於你的具體保單。預約前請查看保險 app、保單文件或官方理賠頁面。",
+  planUnsureNotice: "因為你不確定具體計劃，請只把這個結果當作指引。預約前請查看保險 app 或致電保險公司。",
+  claimChecklist: ["這項服務是否包含在你的具體保單中？", "等待期是否已經結束？", "你是否有詳細收據或發票？", "服務提供者是否被保險公司認可？", "你是否已經用完年度限額？"],
+  noPrivateSteps: ["使用 Healthdirect 查找附近的醫療服務。", "盡量尋找 bulk-billing 或低費用服務提供者。", "預約前致電診所，詢問自付費用。", "如果是 GP 問診，請直接詢問是否 bulk bill。"],
+  officialClaimText: "使用保險公司的官方理賠頁面確認保障並開始理賠。",
+  otherInsurerNotice: "你的保險公司暫未列出。請在保險公司官網搜尋 make a claim、extras claim 或 member login。"
+});
+
+Object.assign(translations.zhHant.serviceCategory, {
+  gp: "通常透過 Medicare",
+  specialist: "通常透過 Medicare，除非屬於住院治療",
+  psychology: "可能涉及 Medicare 或 extras",
+  dental: "通常屬於 extras 保險",
+  optical: "通常屬於 extras 保險",
+  physio: "通常屬於 extras 保險",
+  ambulance: "取決於州規則和保單",
+  other: "Medicare 或低費用路徑"
+});
+
+Object.assign(translations.zhHant.serviceExplanation, {
+  gp: "普通 GP 問診通常透過 Medicare 處理，而不是私人健康保險。是否可以 bulk bill 取決於具體診所。",
+  specialist: "非住院專科醫生問診通常涉及 Medicare 返還。私人健康保險通常在住院治療時更相關。",
+  psychology: "如果你有有效的心理健康治療計劃，心理諮詢可能涉及 Medicare。部分 extras 保單也可能包含心理服務。",
+  dental: "牙科通常與 extras 保險相關。請查看年度限額、等待期、服務提供者規則和詳細收據。",
+  optical: "眼科或配鏡通常與 extras 保險相關。請檢查眼鏡、隱形眼鏡或眼部檢查是否包含在保單中。",
+  physio: "物理治療通常與 extras 保險相關。請檢查每次限額、年度限額、等待期以及服務提供者是否被認可。",
+  ambulance: "救護車保障取決於你所在的州和私人健康保險保單。請同時查看州規則和保險公司規則。",
+  other: "你的下一步是查看 Medicare、公共醫療或低費用服務選擇。"
 });
 
 Object.assign(translations.ar.results, {
@@ -533,21 +623,28 @@ Object.assign(translations.ar.results, {
   nextStep: "خطوتك التالية",
   reminder: "تذكير: هذه معلومات عامة فقط ولا تؤكد قبول المطالبة.",
   applyTitle: "قد تكون مؤهلاً للتسجيل في Medicare",
-  applyBody: "بناءً على إجاباتك، من الأفضل التحقق من Medicare قبل الدفع بشكل خاص. قد تكون على بطاقة عائلية أو تستطيع التسجيل بنفسك.",
   visitorCoveredTitle: "قد يكون لديك دعم Medicare كزائر",
   visitorNotListedTitle: "قد تحتاج إلى تأمين سفر أو تغطية صحية خارجية",
   visitorCoveredBody: "لدى أستراليا اتفاقية رعاية صحية متبادلة مع الدولة المختارة. قد تكون الاستشارة مغطاة جزئياً إذا استوفت شروط الاتفاقية.",
+  visitorItalyNote: "بالنسبة للزوار من إيطاليا، قد ينطبق دعم Medicare لفترة 6 أشهر أثناء وجودهم في أستراليا.",
   visitorNotListedBody: "الدولة المختارة غير موجودة في قائمة الاتفاقيات في هذه الأداة. تحقق من تأمين السفر أو التأمين الصحي للطلاب الأجانب أو صفحة Services Australia الرسمية.",
   visitorWhy: "هذا السؤال يتعلق باتفاقيات حكومية بين الدول وليس بالعرق أو اللغة أو المظهر.",
+  visitorSteps: ["اسأل العيادة قبل الحجز هل تقبل مرضى Medicare أو اتفاقية الرعاية الصحية المتبادلة.", "أحضر جواز السفر ومعلومات التأشيرة وأي مستندات تأمين صحي.", "في الحالات العاجلة، اتصل بمقدم الخدمة الصحية مباشرة واسأل عن التكاليف المسبقة.", "استخدم صفحة Services Australia الرسمية لتأكيد القاعدة الدقيقة لبلدك."],
   insuranceUnsureTitle: "تحقق مما إذا كان لديك تأمين صحي خاص بالفعل",
   insuranceUnsureBody: "قد تكون مغطى من خلال بوليصتك أو بوليصة عائلية.",
+  insuranceUnsureSteps: ["ابحث في بريدك عن health insurance أو Medibank أو Bupa أو HCF أو nib أو ahm أو premium.", "تحقق من كشوف البنك عن دفعات تأمين صحي منتظمة.", "اسأل والديك أو شريكك إذا كنت ضمن بوليصة عائلية.", "تحقق مما إذا كانت لديك بطاقة تأمين صحي خاص."],
   noPrivateTitle: "مسار Medicare أو تكلفة منخفضة",
   privateTitle: "دليل المطالبة",
   doctorNotice: "مهم: يبدو أن هذه استشارة طبيب. عادةً تتم مطالبة زيارات GP والاستشارات التخصصية خارج المستشفى عبر Medicare وليس التأمين الصحي الخاص.",
   extrasLikely: "الخطوة المحتملة: قد تشمل خطتك خدمات extras. قد تكون الخدمة قابلة للمطالبة إذا كانت مشمولة وانتهت فترة الانتظار ولم يتم استخدام الحد السنوي.",
   hospitalIssue: "لقد اخترت تغطية مستشفى. هذه الخدمة غالباً مرتبطة بتغطية extras، لذلك قد لا تكون قابلة للمطالبة إلا إذا كانت خطتك تشمل extras أيضاً.",
+  ambulanceNotice: "تغطية الإسعاف تعتمد على الولاية وعلى وثيقة التأمين الدقيقة. تحقق من شركة التأمين وقواعد الإسعاف في الولاية.",
+  policyNotice: "هذا يعتمد على وثيقتك الدقيقة. تحقق من تطبيق شركة التأمين أو بيان الوثيقة أو صفحة المطالبات الرسمية قبل الحجز.",
   planUnsureNotice: "لأنك غير متأكد من الخطة الدقيقة، اعتبر هذه النتيجة دليلاً فقط. تحقق من تطبيق التأمين أو اتصل بالشركة قبل الحجز.",
-  officialClaimText: "استخدم صفحة المطالبات الرسمية لشركة التأمين لتأكيد التغطية وبدء المطالبة."
+  claimChecklist: ["هل هذه الخدمة مشمولة في وثيقتك الدقيقة؟", "هل انتهت فترة الانتظار؟", "هل لديك إيصال أو فاتورة مفصلة؟", "هل مقدم الخدمة معترف به من شركة التأمين؟", "هل استخدمت الحد السنوي بالفعل؟"],
+  noPrivateSteps: ["استخدم Healthdirect للعثور على خدمة صحية قريبة.", "ابحث عن مقدمي خدمة منخفضي التكلفة أو bulk-billing عند توفرهم.", "اتصل بالعيادة قبل الحجز واسأل عن التكاليف التي ستدفعها.", "بالنسبة لزيارة GP، اسأل مباشرة هل يقدمون bulk billing."],
+  officialClaimText: "استخدم صفحة المطالبات الرسمية لشركة التأمين لتأكيد التغطية وبدء المطالبة.",
+  otherInsurerNotice: "شركة التأمين غير مدرجة بعد. ابحث في موقعها الرسمي عن make a claim أو extras claim أو member login."
 });
 
 Object.assign(translations.tr.results, {
@@ -560,21 +657,28 @@ Object.assign(translations.tr.results, {
   nextStep: "Sonraki adımınız",
   reminder: "Hatırlatma: Bu yalnızca genel rehberdir. Talebinizin kabul edileceğini garanti etmez.",
   applyTitle: "Medicare'e kayıt olabilirsiniz",
-  applyBody: "Cevaplarınıza göre, özel ödeme yapmadan önce Medicare'i kontrol etmek mantıklı. Aile Medicare kartında olabilirsiniz veya kendiniz kayıt olabilirsiniz.",
   visitorCoveredTitle: "Ziyaretçi olarak Medicare desteğiniz olabilir",
   visitorNotListedTitle: "Seyahat sigortası veya yurtdışı sağlık kapsamı gerekebilir",
   visitorCoveredBody: "Avustralya'nın seçtiğiniz ülkeyle karşılıklı sağlık anlaşması vardır. Şartlar sağlanırsa danışma Medicare tarafından kısmen desteklenebilir.",
+  visitorItalyNote: "İtalya'dan gelen ziyaretçiler için Medicare desteği Avustralya'daki 6 aylık süreyle sınırlı olabilir.",
   visitorNotListedBody: "Seçtiğiniz ülke bu aracın anlaşma listesinde yok. Seyahat sigortasını, öğrenci sağlık kapsamını veya resmi Services Australia sayfasını kontrol edin.",
   visitorWhy: "Bu soru ülkeler arası resmi anlaşmalarla ilgilidir; ırk, etnik köken, dil veya görünüşle ilgili değildir.",
+  visitorSteps: ["Randevudan önce kliniğe Medicare veya Reciprocal Health Care Agreement hastalarını kabul edip etmediklerini sorun.", "Pasaportunuzu, vize bilgilerinizi ve sağlık sigortası belgelerinizi getirin.", "Acil durumda sağlık hizmeti sağlayıcısıyla doğrudan iletişime geçin ve peşin maliyetleri sorun.", "Ülkeniz için kesin kuralı doğrulamak üzere resmi Services Australia karşılıklı anlaşma sayfasını kullanın."],
   insuranceUnsureTitle: "Zaten özel sağlık sigortanız olup olmadığını kontrol edin",
-  insuranceUnsureBody: "Kendi poliçeniz veya aile poliçeniz kapsamında olabilirsiniz.",
+  insuranceUnsureBody: "Kendi poliçeniz veya aile poliçesi kapsamında olabilirsiniz.",
+  insuranceUnsureSteps: ["E-postanızda health insurance, Medibank, Bupa, HCF, nib, ahm veya premium gibi kelimeleri arayın.", "Banka hesap hareketlerinizde düzenli sağlık sigortası ödemelerini kontrol edin.", "Ailenize veya partnerinize aile poliçesinde olup olmadığınızı sorun.", "Özel sağlık sigortası kartınız olup olmadığını kontrol edin."],
   noPrivateTitle: "Medicare veya düşük maliyet yolu",
   privateTitle: "Talep rehberi",
   doctorNotice: "Önemli: Bu bir doktor danışması gibi görünüyor. GP ve hastane dışı uzman görüşmeleri genellikle özel sigorta yerine Medicare üzerinden yapılır.",
   extrasLikely: "Olası sonraki adım: Seçtiğiniz plan extras içerebilir. Hizmet poliçeye dahilse, bekleme süresi bittiyse ve limit dolmadıysa talep edilebilir.",
   hospitalIssue: "Hastane tipi kapsam seçtiniz. Bu hizmet genellikle extras ile ilgilidir, bu nedenle extras yoksa talep edilemeyebilir.",
+  ambulanceNotice: "Ambulans kapsamı eyalete ve poliçeye bağlıdır. Hem sigortacıyı hem de eyalet ambulans kurallarını kontrol edin.",
+  policyNotice: "Bu kesin poliçenize bağlıdır. Randevudan önce sigorta uygulamasını, poliçe belgesini veya resmi talep sayfasını kontrol edin.",
   planUnsureNotice: "Planınızdan emin olmadığınız için bunu yalnızca rehber olarak kullanın. Randevudan önce sigorta uygulamasını kontrol edin veya sigortacıyı arayın.",
-  officialClaimText: "Kapsamınızı doğrulamak ve talebi başlatmak için sigortacınızın resmi talep sayfasını kullanın."
+  claimChecklist: ["Bu hizmet kesin poliçenize dahil mi?", "Bekleme süresi bitti mi?", "Ayrıntılı makbuz veya faturanız var mı?", "Hizmet sağlayıcı sigortacınız tarafından tanınıyor mu?", "Yıllık limitinizi kullandınız mı?"],
+  noPrivateSteps: ["Yakındaki sağlık hizmetlerini bulmak için Healthdirect kullanın.", "Mümkünse bulk-billing veya düşük maliyetli sağlayıcıları arayın.", "Randevudan önce kliniği arayıp cepten ödenecek maliyetleri sorun.", "GP ziyaretleri için doğrudan bulk bill yapıp yapmadıklarını sorun."],
+  officialClaimText: "Kapsamınızı doğrulamak ve talebi başlatmak için sigortacınızın resmi talep sayfasını kullanın.",
+  otherInsurerNotice: "Sigortacınız henüz listede yok. Resmi sitesinde make a claim, extras claim veya member login arayın."
 });
 
 Object.assign(translations.hi.results, {
@@ -587,22 +691,30 @@ Object.assign(translations.hi.results, {
   nextStep: "आपका अगला कदम",
   reminder: "याद रखें: यह केवल सामान्य मार्गदर्शन है। यह गारंटी नहीं देता कि आपका क्लेम स्वीकार होगा।",
   applyTitle: "आप Medicare में नामांकन कर सकते हैं",
-  applyBody: "आपके उत्तरों के आधार पर, निजी भुगतान करने से पहले Medicare जांचना उचित है। आप परिवार के Medicare कार्ड पर हो सकते हैं या खुद नामांकन कर सकते हैं।",
   visitorCoveredTitle: "विज़िटर के रूप में आपको Medicare सहायता मिल सकती है",
   visitorNotListedTitle: "आपको यात्रा बीमा या विदेशी स्वास्थ्य कवर की आवश्यकता हो सकती है",
   visitorCoveredBody: "ऑस्ट्रेलिया का चुने गए देश के साथ पारस्परिक स्वास्थ्य समझौता है। यदि शर्तें पूरी होती हैं, तो परामर्श Medicare से आंशिक रूप से कवर हो सकता है।",
+  visitorItalyNote: "इटली से आने वाले आगंतुकों के लिए Medicare सहायता ऑस्ट्रेलिया में 6 महीने की अवधि तक लागू हो सकती है।",
   visitorNotListedBody: "चुना गया देश इस टूल की समझौता सूची में नहीं है। यात्रा बीमा, overseas student health cover या आधिकारिक Services Australia पेज जांचें।",
   visitorWhy: "यह सवाल देशों के सरकारी समझौतों के बारे में है, नस्ल, जातीयता, भाषा या रूप-रंग के बारे में नहीं।",
+  visitorSteps: ["बुकिंग से पहले क्लिनिक से पूछें कि क्या वे Medicare या Reciprocal Health Care Agreement मरीजों को स्वीकार करते हैं।", "अपना पासपोर्ट, visa जानकारी और स्वास्थ्य बीमा दस्तावेज़ साथ लाएँ।", "जरूरी या urgent care के लिए स्वास्थ्य सेवा प्रदाता से सीधे संपर्क करें और upfront costs पूछें।", "अपने देश के सटीक नियम की पुष्टि के लिए आधिकारिक Services Australia reciprocal agreement पेज देखें।"],
   insuranceUnsureTitle: "जांचें कि क्या आपके पास पहले से निजी स्वास्थ्य बीमा है",
   insuranceUnsureBody: "आप अपनी पॉलिसी या परिवार की पॉलिसी में कवर हो सकते हैं।",
+  insuranceUnsureSteps: ["अपने ईमेल में health insurance, Medibank, Bupa, HCF, nib, ahm या premium जैसे शब्द खोजें।", "बैंक स्टेटमेंट में नियमित स्वास्थ्य बीमा भुगतान देखें।", "माता-पिता या partner से पूछें कि क्या आप family policy में हैं।", "देखें कि क्या आपके पास private health insurance card है।"],
   noPrivateTitle: "Medicare या कम लागत वाला मार्ग",
   privateTitle: "क्लेम गाइड",
   doctorNotice: "महत्वपूर्ण: यह डॉक्टर परामर्श जैसा लगता है। GP और अस्पताल के बाहर specialist परामर्श आमतौर पर निजी बीमा के बजाय Medicare से जुड़े होते हैं।",
   extrasLikely: "संभावित अगला कदम: आपकी चुनी गई योजना में extras हो सकते हैं। यदि सेवा शामिल है, waiting period खत्म है और annual limit बची है, तो क्लेम संभव हो सकता है।",
   hospitalIssue: "आपने hospital-style cover चुना है। यह सेवा अक्सर extras से जुड़ी होती है, इसलिए extras न होने पर क्लेम संभव नहीं हो सकता।",
+  ambulanceNotice: "Ambulance cover आपके राज्य और policy पर निर्भर करता है। बीमाकर्ता और state ambulance rules दोनों देखें।",
+  policyNotice: "यह आपकी सही policy पर निर्भर करता है। बुकिंग से पहले बीमा ऐप, policy statement या official claim page देखें।",
   planUnsureNotice: "क्योंकि आप अपनी सही योजना को लेकर अनिश्चित हैं, इसे केवल मार्गदर्शन मानें। बुकिंग से पहले बीमा ऐप देखें या बीमाकर्ता को कॉल करें।",
-  officialClaimText: "अपने कवर की पुष्टि करने और क्लेम शुरू करने के लिए बीमाकर्ता के आधिकारिक क्लेम पेज का उपयोग करें।"
+  claimChecklist: ["क्या यह सेवा आपकी सही policy में शामिल है?", "क्या waiting period खत्म हो गया है?", "क्या आपके पास itemised receipt या invoice है?", "क्या provider को आपका insurer मान्यता देता है?", "क्या आपने annual limit पहले ही उपयोग कर ली है?"],
+  noPrivateSteps: ["नज़दीकी स्वास्थ्य सेवा खोजने के लिए Healthdirect का उपयोग करें।", "जहाँ उपलब्ध हो, bulk-billing या कम लागत वाले providers खोजें।", "बुकिंग से पहले क्लिनिक को कॉल करें और out-of-pocket costs पूछें।", "GP visit के लिए सीधे पूछें कि क्या वे bulk bill करते हैं।"],
+  officialClaimText: "अपने कवर की पुष्टि करने और क्लेम शुरू करने के लिए बीमाकर्ता के आधिकारिक क्लेम पेज का उपयोग करें।",
+  otherInsurerNotice: "आपका बीमाकर्ता अभी सूची में नहीं है। उसकी official website पर make a claim, extras claim या member login खोजें।"
 });
+
 
 const insurers = {
   medibank: {
@@ -697,17 +809,17 @@ const serviceIcons = {
 };
 
 const rhcaCountries = {
-  belgium: "Belgium",
-  finland: "Finland",
-  italy: "Italy",
-  malta: "Malta",
-  netherlands: "Netherlands",
-  newZealand: "New Zealand",
-  norway: "Norway",
-  ireland: "Ireland",
-  slovenia: "Slovenia",
-  sweden: "Sweden",
-  unitedKingdom: "United Kingdom"
+  belgium: { name: "Belgium", flag: "assets/countries/belgium.png", fallback: "BE" },
+  finland: { name: "Finland", flag: "assets/countries/finland.png", fallback: "FI" },
+  italy: { name: "Italy", flag: "assets/countries/italy.png", fallback: "IT" },
+  malta: { name: "Malta", flag: "assets/countries/malta.png", fallback: "MT" },
+  netherlands: { name: "Netherlands", flag: "assets/countries/netherlands.png", fallback: "NL" },
+  newZealand: { name: "New Zealand", flag: "assets/countries/new-zealand.png", fallback: "NZ" },
+  norway: { name: "Norway", flag: "assets/countries/norway.png", fallback: "NO" },
+  ireland: { name: "Ireland", flag: "assets/countries/ireland.png", fallback: "IE" },
+  slovenia: { name: "Slovenia", flag: "assets/countries/slovenia.png", fallback: "SI" },
+  sweden: { name: "Sweden", flag: "assets/countries/sweden.png", fallback: "SE" },
+  unitedKingdom: { name: "United Kingdom", flag: "assets/countries/united-kingdom.png", fallback: "UK" }
 };
 
 function getText() {
@@ -738,6 +850,21 @@ function imageIconHtml(src, alt, fallback) {
     <span class="service-icon-wrap">
       <img class="service-icon-img" src="${src}" alt="${alt}" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';" />
       <span class="logo-fallback" aria-hidden="true" style="display: none;">${fallback}</span>
+    </span>
+  `;
+}
+
+function flagIconHtml(countryKey) {
+  const country = rhcaCountries[countryKey] || {
+    name: "Other country",
+    flag: "assets/countries/other-country.png",
+    fallback: "?"
+  };
+
+  return `
+    <span class="flag-wrap">
+      <img class="flag-icon-img" src="${country.flag}" alt="${country.name} flag" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';" />
+      <span class="logo-fallback" aria-hidden="true" style="display: none;">${country.fallback}</span>
     </span>
   `;
 }
@@ -822,9 +949,9 @@ function planAnswers() {
 function countryAnswers() {
   const t = getText();
   const answers = Object.keys(rhcaCountries).map((key) => ({
-    text: rhcaCountries[key],
+    text: rhcaCountries[key].name,
     detail: t.whyCountry,
-    iconHtml: iconHtml("🌐"),
+    iconHtml: flagIconHtml(key),
     value: key,
     next: "visitorService"
   }));
@@ -833,7 +960,7 @@ function countryAnswers() {
   answers.push({
     text: other.text,
     detail: other.detail,
-    iconHtml: iconHtml("?"),
+    iconHtml: flagIconHtml("other"),
     value: "other",
     next: "visitorService"
   });
@@ -1094,7 +1221,24 @@ function renderResult(resultType) {
   }
 
   html += `<div class="notice">${getText().results.reminder}</div>`;
+
+  if (historyStack.length > 0) {
+    html += `
+      <div class="result-actions">
+        <button id="resultBackButton" class="secondary-button icon-button" type="button">
+          <span class="button-icon" aria-hidden="true">←</span>
+          <span>${getText().back}</span>
+        </button>
+      </div>
+    `;
+  }
+
   resultCard.innerHTML = html;
+
+  const resultBackButton = document.getElementById("resultBackButton");
+  if (resultBackButton) {
+    resultBackButton.addEventListener("click", goBack);
+  }
 }
 
 function renderMedicareResult(resultType) {
@@ -1137,7 +1281,7 @@ function renderVisitorResult() {
   const t = getText();
   const r = t.results;
   const service = getServiceInfo(state.visitorService || "other");
-  const countryName = rhcaCountries[state.visitorCountry] || t.answers.otherCountry[0];
+  const countryName = rhcaCountries[state.visitorCountry]?.name || t.answers.otherCountry[0];
   const isCoveredCountry = Boolean(rhcaCountries[state.visitorCountry]);
   const italyNote = state.visitorCountry === "italy" ? `<div class="notice">${r.visitorItalyNote}</div>` : "";
 
@@ -1241,13 +1385,15 @@ function updateStaticText() {
   smallPrintText.textContent = t.smallPrint;
 }
 
-backButton.addEventListener("click", () => {
+function goBack() {
   const previousStep = historyStack.pop();
 
   if (previousStep) {
     renderStep(previousStep, false);
   }
-});
+}
+
+backButton.addEventListener("click", goBack);
 
 restartButton.addEventListener("click", () => {
   Object.keys(state).forEach((key) => {

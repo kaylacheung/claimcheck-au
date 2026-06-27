@@ -24,6 +24,14 @@
         </select>
       </div>
 
+      <details class="auto-translate-box">
+        <summary>More Languages / Automatic Translate</summary>
+        <div id="googleTranslateElement" class="google-translate-element"></div>
+        <p class="auto-translate-note">
+          Optional. This uses Google's website translation widget for extra languages. For important health guidance, always confirm with the official link.
+        </p>
+      </details>
+
       <p id="heroTag" class="tag">Australian Health Claim Helper</p>
       <h1>ClaimCheck AU</h1>
       <p id="heroSlogan" class="slogan">Claim Maximiser</p>
@@ -74,5 +82,20 @@
   </main>
 
   <script src="script.js"></script>
+  <script>
+    function googleTranslateElementInit() {
+      if (window.google && window.google.translate) {
+        new window.google.translate.TranslateElement(
+          {
+            pageLanguage: "en",
+            includedLanguages: "en,zh-CN,zh-TW,ar,tr,hi,vi,ko,el,it,es,fr,id,ms,th,ja",
+            layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE
+          },
+          "googleTranslateElement"
+        );
+      }
+    }
+  </script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
