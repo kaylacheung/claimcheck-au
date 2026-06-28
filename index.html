@@ -6,52 +6,93 @@
 
   <title>ClaimCheck AU</title>
 
+  <link rel="icon" type="image/png" href="assets/brand/favicon.png" />
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
   <main class="app">
     <section class="hero">
-      <div class="language-row">
+      <div class="language-row notranslate" translate="no">
         <label for="languageSelect" id="languageLabel">Language</label>
         <select id="languageSelect" aria-label="Choose language">
           <option value="en">English</option>
-          <option value="zh-CN">Simplified Chinese</option>
-          <option value="zh-TW">Traditional Chinese</option>
-          <option value="ar">Arabic</option>
-          <option value="tr">Turkish</option>
-          <option value="hi">Hindi</option>
-          <option value="pa">Punjabi</option>
-          <option value="ta">Tamil</option>
-          <option value="bn">Bengali</option>
-          <option value="ur">Urdu</option>
-          <option value="vi">Vietnamese</option>
-          <option value="fr">French</option>
-          <option value="es">Spanish</option>
-          <option value="ja">Japanese</option>
-          <option value="ko">Korean</option>
-          <option value="el">Greek</option>
-          <option value="it">Italian</option>
-          <option value="de">German</option>
-          <option value="pt">Portuguese</option>
-          <option value="id">Indonesian</option>
-          <option value="ms">Malay</option>
-          <option value="th">Thai</option>
+          <option value="zh-CN">简体中文</option>
+          <option value="zh-TW">繁體中文</option>
+          <option value="ar">العربية</option>
+          <option value="tr">Türkçe</option>
+          <option value="hi">हिन्दी</option>
+          <option value="pa">ਪੰਜਾਬੀ</option>
+          <option value="ta">தமிழ்</option>
+          <option value="bn">বাংলা</option>
+          <option value="ur">اردو</option>
+          <option value="vi">Tiếng Việt</option>
+          <option value="fr">Français</option>
+          <option value="es">Español</option>
+          <option value="ja">日本語</option>
+          <option value="ko">한국어</option>
+          <option value="el">Ελληνικά</option>
+          <option value="it">Italiano</option>
+          <option value="de">Deutsch</option>
+          <option value="pt">Português</option>
+          <option value="id">Bahasa Indonesia</option>
+          <option value="ms">Bahasa Melayu</option>
+          <option value="th">ไทย</option>
           <option value="tl">Filipino</option>
-          <option value="fa">Persian</option>
-          <option value="ru">Russian</option>
-          <option value="pl">Polish</option>
-          <option value="uk">Ukrainian</option>
+          <option value="fa">فارسی</option>
+          <option value="ru">Русский</option>
+          <option value="pl">Polski</option>
+          <option value="uk">Українська</option>
+          <option value="ne">नेपाली</option>
+          <option value="gu">ગુજરાતી</option>
+          <option value="mr">मराठी</option>
         </select>
-        <div id="googleTranslateElement" class="google-translate-holder" aria-hidden="true"></div>
+        <div id="googleTranslateElement" class="google-translate-holder notranslate" translate="no" aria-hidden="true"></div>
       </div>
 
-      <p id="heroTag" class="tag">Australian Health Claim Helper</p>
-      <h1>ClaimCheck AU</h1>
-      <p id="heroSlogan" class="slogan">Claim Maximiser</p>
-      <p id="heroSubtext" class="subtext">
-        Helping you maximise every eligible health claim.
-      </p>
+      <div class="brand-line">
+        <img
+          class="brand-logo notranslate"
+          src="assets/brand/claimcheck-logo.png"
+          alt="ClaimCheck AU logo"
+          onerror="this.style.display='none';"
+          translate="no"
+        />
+        <div class="brand-copy">
+          <p id="heroTag" class="tag">Australian Health Claim Helper</p>
+          <h1 class="notranslate" translate="no">ClaimCheck AU</h1>
+          <p id="heroSlogan" class="slogan">Claim Maximiser</p>
+          <p id="heroSubtext" class="subtext">
+            Helping you maximise every eligible health claim.
+          </p>
+        </div>
+      </div>
+
+      <section class="banner-carousel" aria-label="ClaimCheck AU information banners">
+        <article class="banner-slide active">
+          <img src="assets/banners/banner-1.png" alt="ClaimCheck AU banner 1" onerror="this.classList.add('hidden');" />
+          <div class="banner-fallback">
+            <p>Check Medicare, private insurance, and visitor health options in one simple guide.</p>
+          </div>
+        </article>
+        <article class="banner-slide">
+          <img src="assets/banners/banner-2.png" alt="ClaimCheck AU banner 2" onerror="this.classList.add('hidden');" />
+          <div class="banner-fallback">
+            <p>Know the likely claim pathway before booking or paying for a health service.</p>
+          </div>
+        </article>
+        <article class="banner-slide">
+          <img src="assets/banners/banner-3.png" alt="ClaimCheck AU banner 3" onerror="this.classList.add('hidden');" />
+          <div class="banner-fallback">
+            <p>Built for clear, simple health claim guidance in Australia.</p>
+          </div>
+        </article>
+        <div class="banner-dots notranslate" translate="no" aria-hidden="true">
+          <button class="banner-dot active" type="button" data-slide="0"></button>
+          <button class="banner-dot" type="button" data-slide="1"></button>
+          <button class="banner-dot" type="button" data-slide="2"></button>
+        </div>
+      </section>
     </section>
 
     <section class="progress-card">
@@ -85,6 +126,33 @@
     </section>
 
     <section id="resultCard" class="card result-card hidden"></section>
+
+
+    <section class="insurer-logo-wall" aria-label="Australian health insurer logo wall">
+      <p class="logo-wall-eyebrow">Supported Insurer Recognition</p>
+      <h2>Compare Major Australian Health Insurers</h2>
+      <p class="logo-wall-note">
+        Add insurer logos here so users can recognise their fund visually.
+      </p>
+      <div class="logo-wall-grid notranslate" translate="no">
+        <div class="wall-logo"><img src="assets/health-insurers/medibank.png" alt="Medibank logo" onerror="this.parentElement.classList.add('missing');" /><span>Medibank</span></div>
+        <div class="wall-logo"><img src="assets/health-insurers/bupa.png" alt="Bupa logo" onerror="this.parentElement.classList.add('missing');" /><span>Bupa</span></div>
+        <div class="wall-logo"><img src="assets/health-insurers/hcf.png" alt="HCF logo" onerror="this.parentElement.classList.add('missing');" /><span>HCF</span></div>
+        <div class="wall-logo"><img src="assets/health-insurers/nib.png" alt="nib logo" onerror="this.parentElement.classList.add('missing');" /><span>nib</span></div>
+        <div class="wall-logo"><img src="assets/health-insurers/ahm.png" alt="ahm logo" onerror="this.parentElement.classList.add('missing');" /><span>ahm</span></div>
+        <div class="wall-logo"><img src="assets/health-insurers/australian-unity.png" alt="Australian Unity logo" onerror="this.parentElement.classList.add('missing');" /><span>Australian Unity</span></div>
+        <div class="wall-logo"><img src="assets/health-insurers/hbf.png" alt="HBF logo" onerror="this.parentElement.classList.add('missing');" /><span>HBF</span></div>
+        <div class="wall-logo"><img src="assets/health-insurers/teachers-health.png" alt="Teachers Health logo" onerror="this.parentElement.classList.add('missing');" /><span>Teachers Health</span></div>
+        <div class="wall-logo"><img src="assets/health-insurers/defence-health.png" alt="Defence Health logo" onerror="this.parentElement.classList.add('missing');" /><span>Defence Health</span></div>
+        <div class="wall-logo"><img src="assets/health-insurers/cbhs.png" alt="CBHS logo" onerror="this.parentElement.classList.add('missing');" /><span>CBHS</span></div>
+        <div class="wall-logo"><img src="assets/health-insurers/frank.png" alt="Frank Health Insurance logo" onerror="this.parentElement.classList.add('missing');" /><span>Frank</span></div>
+        <div class="wall-logo"><img src="assets/health-insurers/gmhba.png" alt="GMHBA logo" onerror="this.parentElement.classList.add('missing');" /><span>GMHBA</span></div>
+        <div class="wall-logo"><img src="assets/health-insurers/health-com-au.png" alt="health.com.au logo" onerror="this.parentElement.classList.add('missing');" /><span>health.com.au</span></div>
+        <div class="wall-logo"><img src="assets/health-insurers/phoenix-health.png" alt="Phoenix Health logo" onerror="this.parentElement.classList.add('missing');" /><span>Phoenix Health</span></div>
+        <div class="wall-logo"><img src="assets/health-insurers/westfund.png" alt="Westfund logo" onerror="this.parentElement.classList.add('missing');" /><span>Westfund</span></div>
+        <div class="wall-logo"><img src="assets/health-insurers/latrobe-health.png" alt="Latrobe Health logo" onerror="this.parentElement.classList.add('missing');" /><span>Latrobe Health</span></div>
+      </div>
+    </section>
 
     <section class="small-print">
       <p id="smallPrintText">
