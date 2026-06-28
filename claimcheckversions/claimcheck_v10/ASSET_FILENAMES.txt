@@ -1,0 +1,90 @@
+ClaimCheck AU asset filenames
+============================
+
+Put these folders inside your project root next to index.html, style.css and script.js.
+
+Brand assets
+------------
+assets/brand/claimcheck-logo.png
+assets/brand/favicon.png
+
+Medicare sample card
+--------------------
+assets/logos/medicare-card.jpg
+
+Hero banners
+------------
+Recommended size for every banner: 1916 x 821 px.
+Export your final banners WITHOUT the top navigation bar, logo or phone number.
+The website creates the top bar itself.
+
+assets/banners/banner-1.png
+assets/banners/banner-2.png
+assets/banners/banner-3.png
+assets/banners/banner-4.png
+assets/banners/banner-5.png
+assets/banners/banner-6.png
+assets/banners/banner-7.png
+assets/banners/banner-8.png
+assets/banners/banner-9.png
+assets/banners/banner-10.png
+
+Health insurer logos
+--------------------
+Put these inside: assets/health-insurers/
+The logos appear only on the first question page. They are smaller, darker and blended into the dark background.
+
+assets/health-insurers/medibank.png
+assets/health-insurers/bupa.png
+assets/health-insurers/hcf.png
+assets/health-insurers/nib.png
+assets/health-insurers/ahm.png
+assets/health-insurers/australian-unity.png
+assets/health-insurers/hbf.png
+assets/health-insurers/teachers-health.png
+assets/health-insurers/defence-health.png
+assets/health-insurers/cbhs.png
+assets/health-insurers/frank.png
+assets/health-insurers/gmhba.png
+assets/health-insurers/health-com-au.png
+assets/health-insurers/phoenix-health.png
+assets/health-insurers/westfund.png
+assets/health-insurers/latrobe-health.png
+assets/health-insurers/tuh.png
+assets/health-insurers/peoplecare.png
+assets/health-insurers/queensland-country-health-fund.png
+assets/health-insurers/navy-health.png
+assets/health-insurers/union-health.png
+assets/health-insurers/st-lukes-health.png
+assets/health-insurers/aca-health.png
+assets/health-insurers/mildura-health-fund.png
+
+Health service icons
+--------------------
+Put these inside: assets/icons/
+
+assets/icons/gp.png
+assets/icons/specialist.png
+assets/icons/psychology.png
+assets/icons/dental.png
+assets/icons/optical.png
+assets/icons/physiotherapy.png
+assets/icons/ambulance.png
+assets/icons/other-health-service.png
+
+Country flags
+-------------
+Put these inside: assets/countries/
+
+assets/countries/belgium.png
+assets/countries/finland.png
+assets/countries/italy.png
+assets/countries/malta.png
+assets/countries/netherlands.png
+assets/countries/new-zealand.png
+assets/countries/norway.png
+assets/countries/ireland.png
+assets/countries/slovenia.png
+assets/countries/sweden.png
+assets/countries/united-kingdom.png
+assets/countries/other-country.png
