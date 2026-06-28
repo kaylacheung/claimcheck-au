@@ -1,0 +1,92 @@
+ClaimCheck AU asset naming guide
+================================
+
+Brand logo next to company name
+-------------------------------
+assets/brand/claimcheck-logo.png
+
+Browser tab icon, optional
+--------------------------
+assets/brand/favicon.png
+
+Hero banner images
+------------------
+Put your 10 banner images here. The website creates the top navigation bar itself, so export the banner artwork WITHOUT the top bar/logo/nav/phone line baked into the image.
+
+Recommended size: 1916 x 821 px or 1920 x 820 px.
+Leave enough empty/dark space at the top of the image because the website header sits over the top area.
+
+assets/banners/banner-1.png
+assets/banners/banner-2.png
+assets/banners/banner-3.png
+assets/banners/banner-4.png
+assets/banners/banner-5.png
+assets/banners/banner-6.png
+assets/banners/banner-7.png
+assets/banners/banner-8.png
+assets/banners/banner-9.png
+assets/banners/banner-10.png
+
+Health service icons
+--------------------
+assets/icons/gp.png
+assets/icons/specialist.png
+assets/icons/psychology.png
+assets/icons/dental.png
+assets/icons/optical.png
+assets/icons/physiotherapy.png
+assets/icons/ambulance.png
+assets/icons/other-health-service.png
+
+Insurer logos used inside the question flow
+-------------------------------------------
+assets/logos/medibank.png
+assets/logos/bupa.png
+assets/logos/hcf.png
+assets/logos/nib.png
+assets/logos/ahm.png
+assets/logos/australian-unity.png
+
+Country flags for visitors
+--------------------------
+Use rectangular flag images. The code displays them as rectangles with no black outline.
+
+assets/countries/belgium.png
+assets/countries/finland.png
+assets/countries/italy.png
+assets/countries/malta.png
+assets/countries/netherlands.png
+assets/countries/new-zealand.png
+assets/countries/norway.png
+assets/countries/ireland.png
+assets/countries/slovenia.png
+assets/countries/sweden.png
+assets/countries/united-kingdom.png
+assets/countries/other-country.png
+
+Insurer logo wall at the bottom
+-------------------------------
+assets/insurer-wall/medibank.png
+assets/insurer-wall/bupa.png
+assets/insurer-wall/hcf.png
+assets/insurer-wall/nib.png
+assets/insurer-wall/ahm.png
+assets/insurer-wall/australian-unity.png
+assets/insurer-wall/hbf.png
+assets/insurer-wall/teachers-health.png
+assets/insurer-wall/defence-health.png
+assets/insurer-wall/cbhs.png
+assets/insurer-wall/frank.png
+assets/insurer-wall/gmhba.png
+assets/insurer-wall/health-com-au.png
+assets/insurer-wall/phoenix-health.png
+assets/insurer-wall/westfund.png
+assets/insurer-wall/latrobe-health.png
+assets/insurer-wall/tuh.png
+assets/insurer-wall/peoplecare.png
+assets/insurer-wall/queensland-country-health-fund.png
+assets/insurer-wall/navy-health.png
+assets/insurer-wall/union-health.png
+assets/insurer-wall/st-lukes-health.png
+assets/insurer-wall/aca-health.png
+assets/insurer-wall/mildura-health-fund.png
