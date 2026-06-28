@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>ClaimCheck AU</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="app">
+    <section class="hero">
+      <div class="language-row">
+        <label for="languageSelect" id="languageLabel">Language</label>
+        <select id="languageSelect" aria-label="Choose language">
+          <option value="en">English</option>
+          <option value="zhHans">简体中文</option>
+          <option value="zhHant">繁體中文</option>
+          <option value="ar">العربية</option>
+          <option value="tr">Türkçe</option>
+          <option value="hi">हिन्दी</option>
+        </select>
+      </div>
+
+      <p id="heroTag" class="tag">Australian Health Claim Helper</p>
+      <h1>ClaimCheck AU</h1>
+      <p id="heroSlogan" class="slogan">Claim Maximiser</p>
+      <p id="heroSubtext" class="subtext">
+        Helping you maximise every eligible health claim.
+      </p>
+    </section>
+
+    <section class="progress-card">
+      <div class="progress-top">
+        <span id="stepLabel">Step 1 of 7</span>
+        <button id="restartButton" class="text-button icon-button" type="button">
+          <span class="button-icon" aria-hidden="true">↻</span>
+          <span id="restartText">Restart</span>
+        </button>
+      </div>
+
+      <div class="progress-bar" aria-hidden="true">
+        <div id="progressFill"></div>
+      </div>
+    </section>
+
+    <section id="questionCard" class="card">
+      <p id="questionEyebrow" class="eyebrow">Step 1</p>
+      <h2 id="questionTitle">Do You Have a Medicare Card?</h2>
+      <p id="questionHelp">
+        Look at the sample card below and choose the option that best matches you.
+      </p>
+
+      <div id="questionVisual" class="question-visual hidden"></div>
+      <div id="answerButtons" class="answer-grid"></div>
+
+      <button id="backButton" class="secondary-button icon-button hidden" type="button">
+        <span class="button-icon" aria-hidden="true">←</span>
+        <span id="backText">Back</span>
+      </button>
+    </section>
+
+    <section id="resultCard" class="card result-card hidden"></section>
+
+    <section class="small-print">
+      <p id="smallPrintText">
+        ClaimCheck AU gives general information only. It does not provide medical,
+        legal, financial, or insurance advice. Always confirm directly with Medicare,
+        your insurer, or your health provider.
+      </p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

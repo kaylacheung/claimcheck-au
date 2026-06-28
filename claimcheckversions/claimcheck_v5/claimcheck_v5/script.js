@@ -33,8 +33,6 @@ const heroSubtext = document.getElementById("heroSubtext");
 const restartText = document.getElementById("restartText");
 const backText = document.getElementById("backText");
 const smallPrintText = document.getElementById("smallPrintText");
-const bannerSlides = Array.from(document.querySelectorAll(".banner-slide"));
-const bannerDots = Array.from(document.querySelectorAll(".banner-dot"));
 
 let currentStep = "medicare";
 let currentLanguage = localStorage.getItem("claimcheckLanguage") || "en";
@@ -42,7 +40,7 @@ let currentLanguage = localStorage.getItem("claimcheckLanguage") || "en";
 const googleTranslateLanguages = [
   "zh-CN", "zh-TW", "ar", "tr", "hi", "pa", "ta", "bn", "ur", "vi",
   "fr", "es", "ja", "ko", "el", "it", "de", "pt", "id", "ms", "th",
-  "tl", "fa", "ru", "pl", "uk", "ne", "gu", "mr"
+  "tl", "fa", "ru", "pl", "uk"
 ];
 
 const rtlLanguages = ["ar", "fa", "ur"];
@@ -812,77 +810,35 @@ function setDirection(languageCode) {
   document.body.classList.toggle("rtl", rtlLanguages.includes(languageCode));
 }
 
-function cookieDomainCandidates() {
-  const host = window.location.hostname;
-  if (!host || host === "localhost" || /^\d+\.\d+\.\d+\.\d+$/.test(host)) {
-    return [""];
-  }
-
-  return ["", host, `.${host}`];
-}
-
 function clearGoogleTranslateCookie() {
-  cookieDomainCandidates().forEach((domain) => {
-    const domainPart = domain ? `; domain=${domain}` : "";
-    document.cookie = `googtrans=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/${domainPart}`;
-    document.cookie = `googtrans=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; SameSite=Lax${domainPart}`;
-  });
-}
-
-function setGoogleTranslateCookie(languageCode) {
-  clearGoogleTranslateCookie();
-
-  if (languageCode === "en") return;
-
-  cookieDomainCandidates().forEach((domain) => {
-    const domainPart = domain ? `; domain=${domain}` : "";
-    document.cookie = `googtrans=/en/${languageCode}; path=/${domainPart}`;
-    document.cookie = `googtrans=/en/${languageCode}; path=/; SameSite=Lax${domainPart}`;
-  });
-}
-
-function getGoogleCombo() {
-  return document.querySelector(".goog-te-combo");
-}
-
-function dispatchGoogleComboChange(combo) {
-  combo.dispatchEvent(new Event("change", { bubbles: true }));
-  combo.dispatchEvent(new Event("input", { bubbles: true }));
+  document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+  document.cookie = `googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=${window.location.hostname};`;
+  document.cookie = `googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.${window.location.hostname};`;
 }
 
 function changeGoogleLanguage(languageCode, attempt = 0) {
-  setDirection(languageCode);
-  setGoogleTranslateCookie(languageCode);
-
-  const combo = getGoogleCombo();
+  const combo = document.querySelector(".goog-te-combo");
 
   if (!combo) {
-    if (attempt < 40) {
-      window.setTimeout(() => changeGoogleLanguage(languageCode, attempt + 1), 250);
+    if (attempt < 25) {
+      window.setTimeout(() => changeGoogleLanguage(languageCode, attempt + 1), 200);
     }
     return;
   }
 
-  combo.value = languageCode === "en" ? "" : languageCode;
-  dispatchGoogleComboChange(combo);
-
-  // Google Translate sometimes misses text that was added after the page loaded.
-  // Re-dispatch once so the final recommendation page and newly rendered questions are also translated.
-  if (languageCode !== "en" && attempt === 0) {
-    window.setTimeout(() => {
-      const latestCombo = getGoogleCombo();
-      if (!latestCombo) return;
-      latestCombo.value = languageCode;
-      dispatchGoogleComboChange(latestCombo);
-    }, 650);
+  if (languageCode === "en") {
+    clearGoogleTranslateCookie();
+    combo.value = "";
+  } else {
+    combo.value = languageCode;
   }
+
+  combo.dispatchEvent(new Event("change"));
 }
 
 function afterRenderTranslate() {
   setDirection(currentLanguage);
-  if (currentLanguage !== "en") {
-    window.setTimeout(() => changeGoogleLanguage(currentLanguage), 180);
-  }
+  window.setTimeout(() => changeGoogleLanguage(currentLanguage), 100);
 }
 
 window.googleTranslateElementInit = function googleTranslateElementInit() {
@@ -897,41 +853,9 @@ window.googleTranslateElementInit = function googleTranslateElementInit() {
       "googleTranslateElement"
     );
 
-    window.setTimeout(() => changeGoogleLanguage(currentLanguage), 700);
+    window.setTimeout(() => changeGoogleLanguage(currentLanguage), 500);
   }
 };
-
-function showBannerSlide(index) {
-  if (!bannerSlides.length) return;
-
-  const safeIndex = ((index % bannerSlides.length) + bannerSlides.length) % bannerSlides.length;
-
-  bannerSlides.forEach((slide, slideIndex) => {
-    slide.classList.toggle("active", slideIndex === safeIndex);
-  });
-
-  bannerDots.forEach((dot, dotIndex) => {
-    dot.classList.toggle("active", dotIndex === safeIndex);
-  });
-}
-
-function initBannerCarousel() {
-  if (!bannerSlides.length) return;
-
-  let currentBanner = 0;
-
-  bannerDots.forEach((dot) => {
-    dot.addEventListener("click", () => {
-      currentBanner = Number(dot.dataset.slide || 0);
-      showBannerSlide(currentBanner);
-    });
-  });
-
-  window.setInterval(() => {
-    currentBanner += 1;
-    showBannerSlide(currentBanner);
-  }, 4500);
-}
 
 function goBack() {
   const previousStep = historyStack.pop();
@@ -952,89 +876,15 @@ restartButton.addEventListener("click", () => {
   renderStep("medicare", false);
 });
 
-const flowSessionKey = "claimcheckFlowSnapshot";
-
-function saveFlowSnapshot() {
-  const snapshot = {
-    state,
-    historyStack,
-    currentStep,
-    currentLanguage
-  };
-
-  sessionStorage.setItem(flowSessionKey, JSON.stringify(snapshot));
-}
-
-function restoreFlowSnapshot() {
-  const saved = sessionStorage.getItem(flowSessionKey);
-  if (!saved) return;
-
-  try {
-    const snapshot = JSON.parse(saved);
-
-    if (snapshot.state && typeof snapshot.state === "object") {
-      Object.keys(state).forEach((key) => {
-        state[key] = snapshot.state[key] ?? null;
-      });
-    }
-
-    if (Array.isArray(snapshot.historyStack)) {
-      historyStack.length = 0;
-      snapshot.historyStack.forEach((step) => historyStack.push(step));
-    }
-
-    if (snapshot.currentStep) currentStep = snapshot.currentStep;
-    if (snapshot.currentLanguage) currentLanguage = snapshot.currentLanguage;
-  } catch (error) {
-    sessionStorage.removeItem(flowSessionKey);
-  }
-}
-
-function useServerBasedTranslateReload() {
-  return window.location.protocol === "http:" || window.location.protocol === "https:";
-}
-
-function applyLanguageSelection(languageCode) {
-  currentLanguage = languageCode;
+languageSelect.addEventListener("change", (event) => {
+  currentLanguage = event.target.value;
   localStorage.setItem("claimcheckLanguage", currentLanguage);
   setDirection(currentLanguage);
-
-  if (currentLanguage === "en") {
-    clearGoogleTranslateCookie();
-  } else {
-    setGoogleTranslateCookie(currentLanguage);
-  }
-
-  saveFlowSnapshot();
-
-  // Google Translate is much more reliable after a normal page reload on GitHub Pages.
-  // The snapshot above restores the same question/result after the reload.
-  if (useServerBasedTranslateReload()) {
-    window.location.reload();
-    return;
-  }
-
   updateStaticEnglishText();
   renderStep(currentStep, false);
-  changeGoogleLanguage(currentLanguage);
-}
-
-languageSelect.addEventListener("change", (event) => {
-  applyLanguageSelection(event.target.value);
 });
 
-restartButton.addEventListener("click", () => {
-  sessionStorage.removeItem(flowSessionKey);
-});
-
-restoreFlowSnapshot();
 languageSelect.value = currentLanguage;
-if (currentLanguage === "en") {
-  clearGoogleTranslateCookie();
-} else {
-  setGoogleTranslateCookie(currentLanguage);
-}
 setDirection(currentLanguage);
 updateStaticEnglishText();
-initBannerCarousel();
-renderStep(currentStep, false);
+renderStep("medicare", false);
