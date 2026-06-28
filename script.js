@@ -1038,3 +1038,4 @@ setDirection(currentLanguage);
 updateStaticEnglishText();
 initBannerCarousel();
 renderStep(currentStep, false);
+  
